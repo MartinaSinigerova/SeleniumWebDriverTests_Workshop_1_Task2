@@ -68,7 +68,6 @@ namespace TestProject2
         [TearDown]
         public void TearDown()
         {
-            // Quit the driver
             driver.Dispose();
         }
     }
