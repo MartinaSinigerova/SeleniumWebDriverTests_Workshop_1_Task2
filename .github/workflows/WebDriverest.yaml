@@ -19,15 +19,16 @@ jobs:
       - name: Set up .Net Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.8.x'
+          dotnet-version: '8.0.x'
       
       - name: Install dependencies
         run: dotnet restore
 
-      - name: build run: dotnet build --no-restore
+      - name: build 
+        run: dotnet build --no-restore
 
       - name: Run testProject1
-        run: dotnet test TestProject1/TestProject1.csproj --verbosity-normal
+        run: dotnet test TestProject1/TestProject1.csproj --verbosity normal
         
       - name: Run testProject2
-        run: dotnet test TestProject2/TestProject2.csproj --verbosity-normal
+        run: dotnet test TestProject2/TestProject2.csproj --verbosity normal
